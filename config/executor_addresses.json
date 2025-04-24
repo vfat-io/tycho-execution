@@ -32,6 +32,6 @@
     "uniswap_v4": "0x475EB503D630C2919DC8B24cB6603E17e69Bfe35"
   },
   "worldchain": {
-    "uniswap_v3": "0x"
+    "uniswap_v3": "0x00"
   }
 }
