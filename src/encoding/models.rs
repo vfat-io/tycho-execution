@@ -167,7 +167,7 @@ impl Chain {
     pub fn native_token(&self) -> Result<Bytes, EncodingError> {
         let decode_err_msg = "Failed to decode native token";
         match self.id {
-            1 | 8453 | 42161 => {
+            1 | 8453 | 42161 | 480 => {
                 self.decode_hex("0000000000000000000000000000000000000000", decode_err_msg)
             }
             324 => self.decode_hex("000000000000000000000000000000000000800A", decode_err_msg),
@@ -187,6 +187,7 @@ impl Chain {
             324 => self.decode_hex("5AEa5775959fBC2557Cc8789bC1bf90A239D9a91", decode_err_msg),
             42161 => self.decode_hex("82aF49447D8a07e3bd95BD0d56f35241523fBab1", decode_err_msg),
             130 => self.decode_hex("4200000000000000000000000000000000000006", decode_err_msg),
+            480 => self.decode_hex("4200000000000000000000000000000000000006", decode_err_msg),
             _ => Err(EncodingError::InvalidInput(format!(
                 "Wrapped token not set for chain {:?}. Double check the chain is supported.",
                 self.name
