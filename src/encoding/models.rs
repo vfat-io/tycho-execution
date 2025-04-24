@@ -152,6 +152,7 @@ impl From<TychoCommonChain> for Chain {
             TychoCommonChain::Starknet => Chain { id: 0, name: chain.to_string() },
             TychoCommonChain::Base => Chain { id: 8453, name: chain.to_string() },
             TychoCommonChain::Unichain => Chain { id: 130, name: chain.to_string() },
+            TychoCommonChain::Worldchain => Chain { id: 480, name: chain.to_string() },
         }
     }
 }
